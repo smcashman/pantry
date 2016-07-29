@@ -1,0 +1,46 @@
+
+
+h1 {
+  text-align:center;
+  font-family:"Sigmar One";
+}
+
+body {
+  background: url("../images/pexelspantry.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  opacity:0.6;
+}
+
+.boxwrapper {
+  background:#eeeeee;
+  margin-top:20px;
+  box-sizing:border-box;
+
+}
+
+.column {
+  float:left;
+  width:46%;
+  min-height:25em;
+  border: 1px solid #aaaaaa;
+  padding:20px;
+  background:white;
+}
+
+ul {
+  list-style:none;
+}
+
+h3 {
+  text-align:center;
+}
+
+.entry {
+  max-width: 15em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom:3em;
+  padding-top:1em;
+
+}

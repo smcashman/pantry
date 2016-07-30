@@ -3,33 +3,38 @@
 h1 {
   text-align:center;
   font-size:3em;
-  font-family:"Sigmar One", sans-serif;
+  font-family:"Homemade Apple", cursive;
   padding-top:1em;
-  color:#CACA9B;
+  color:white;
 }
 
 body {
   background: url("../images/market.jpg");
   background-size:cover;
   background-repeat:no-repeat;
+  font-family:"Indie Flower", sans-serif;
+  color:white;
 }
 
 .boxwrapper {
   background:#eeeeee;
   margin-top:20px;
   box-sizing:border-box;
+}
 
+input {
+  color:red;
 }
 
 .column {
   float:left;
   width:46%;
   min-height:25em;
-  border: 1px solid #aaaaaa;
+  border: 5px solid #662200;
   border-radius:10px;
   padding:20px;
-  opacity:0.8;
-  background:white;
+  background:black;
+
 }
 
 ul {
@@ -38,8 +43,9 @@ ul {
 
 h3 {
   text-align:center;
-  font-family:"Sigmar One", sans-serif;
-  color:#D80D23;
+  font-family:"Indie Flower", sans-serif;
+  color:white;
+  font-size:1.5em;
 }
 
 .entry {
@@ -52,6 +58,6 @@ h3 {
 }
 
 button {
-  font-family:"Sigmar One", sans-serif;
+  font-family:"Indie Flower", sans-serif;
   color:#D80D23;
 }

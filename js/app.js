@@ -8,14 +8,20 @@ $("button#add").click(function(){
 	$("ul.toget").append("<li><i class='fa fa-square-o'></i> "+itemToAdd+"</li>");
 	$("input#item").val("").focus();
 
-	$("ul.toget li").click(function(){
+	$(".toget li").click(function(){
 		var itemClicked = $(this).text();
-		$("ul.got").append("<li><i class='fa fa-check-square-o'></i>"+itemClicked+"<i class='fa fa-trash-o'></i></li>"); 
+		$(".got").append("<li><i id='box' class='fa fa-check-square-o'></i>"+itemClicked+" <i id='trash' class='fa fa-trash-o'></i></li>");
 		$(this).remove();
 
-	$("ul.got li").click(function(){
+	$("#trash").click(function(){
 		var removeItem = $(this).text();
+		$(".got li").remove();
+
+	$("i #box").click(function(){
+		var returnItem = $(this).text();
+		$("ul.toget").append("<li><i class='fa fa-square-o'></i> "+returnItem+"</li>");
 		$(this).remove();
+	})
 
 	})
 	})

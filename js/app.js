@@ -17,13 +17,16 @@ $("button#add").click(function(){
 		var removeItem = $(this).text();
 		$(this).remove();
 
-	/*$(".got li").click(function(){
+	$(".got li").off("click");
+
+	$("#box").click(function(){
+		console.log("work");
 		var returnItem = $(this).text();
 		$(".toget").append("<li><i class='fa fa-square-o'></i> "+returnItem+"</li>");
-		$(this).remove();*/
+		$(this).remove();
 	
   
-	//})
+	})
 	})
 	})
 	}

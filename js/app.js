@@ -13,16 +13,17 @@ $("button#add").click(function(){
 		$(".got").append("<li><i id='box' class='fa fa-check-square-o'></i>"+itemClicked+" <i id='trash' class='fa fa-trash-o'></i></li>");
 		$(this).remove();
 
-	$("#trash").click(function(){
+	$(".got li").click(function(){
 		var removeItem = $(this).text();
-		$(".got li").remove();
-
-	$("i #box").click(function(){
-		var returnItem = $(this).text();
-		$("ul.toget").append("<li><i class='fa fa-square-o'></i> "+returnItem+"</li>");
 		$(this).remove();
-	})
 
+	/*$(".got li").click(function(){
+		var returnItem = $(this).text();
+		$(".toget").append("<li><i class='fa fa-square-o'></i> "+returnItem+"</li>");
+		$(this).remove();*/
+	
+  
+	//})
 	})
 	})
 	}

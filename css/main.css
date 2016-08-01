@@ -1,13 +1,5 @@
 
 
-@media only screen and (max-width: 500px) {
-  .column {
-    width:100%;
-    margin: 0 auto;
-  }
-
-}
-
 h1 {
   text-align:center;
   font-size:3.5em;
@@ -25,25 +17,18 @@ body {
   color:white;
 }
 
-.boxwrapper {
-  background:#eeeeee;
-  margin-top:20px;
-  box-sizing:border-box;
-}
-
 input {
   color:red;
 }
 
 .column {
-  float:left;
-  width:46%;
+  width:50%;
+  margin: 0 auto;
   min-height:25em;
   border: 5px solid #662200;
   border-radius:10px;
   padding:20px;
   background:black;
-
 }
 
 ul {
@@ -59,9 +44,8 @@ h3 {
 
 .entry {
   max-width: 14em;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom:3em;
+  margin: 0 auto;
+  padding-bottom:2em;
   padding-top:1em;
 
 }
@@ -69,4 +53,9 @@ h3 {
 button {
   font-family:"Indie Flower", sans-serif;
   color:#D80D23;
+}
+
+.clicked {
+  color:green;
+  text-align: right;
 }

@@ -5,31 +5,24 @@ $("button#add").click(function(){
 
 	if ($("input#item").val()){
 	var itemToAdd = $("input#item").val();
-	$("ul.toget").append("<li><i class='fa fa-square-o'></i> "+itemToAdd+"</li>");
+	$("ul.toget").append("<li><i id='uncheck' class='fa fa-square-o'></i> "+itemToAdd+" <i id='trash' class='fa fa-trash-o'></i></li>");
 	$("input#item").val("").focus();
-
-	$(".toget li").click(function(){
-		var itemClicked = $(this).text();
-		$(".got").append("<li><i id='box' class='fa fa-check-square-o'></i>"+itemClicked+" <i id='trash' class='fa fa-trash-o'></i></li>");
-		$(this).remove();
-
-	$(".got li").click(function(){
-		var removeItem = $(this).text();
-		$(this).remove();
-
-	$(".got li").off("click");
-
-	$("#box").click(function(){
-		console.log("work");
-		var returnItem = $(this).text();
-		$(".toget").append("<li><i class='fa fa-square-o'></i> "+returnItem+"</li>");
-		$(this).remove();
-	
-  
-	})
-	})
-	})
 	}
+
+	$(".toget li").click(function() {
+	$(this).toggleClass("clicked");
+	});
+
+	$("#trash").click(function() {
+	$(".toget li").remove();
+
+	})
+
+	
+	
+
+
+	
 
  });
 

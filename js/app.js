@@ -1,15 +1,22 @@
 
 
 $(document).ready(function(){
+$(document).on("click", function (e) {
+    e.preventDefault();
+    if (e.handled !== true) {
+        e.handled = true;
 
 	$('input#item').on('keydown', function(e) {
  	if (e.which == 13) {
  	if ($("input#item").val()){
+ 	    $("button#add").click();
+ 		var itemToAdd = $("input#item").val();
 
-       $("button#add").click();
- 	var itemToAdd = $("input#item").val();
+ 
  }
- 	};
+	}
+});
+
  	    
 	$("button#add").click(function(){
 
@@ -21,12 +28,13 @@ $(document).ready(function(){
 	  
 
 });
-	
- 		});
-	$("ul.toget").off().click(function() {
+	};
+ 	
+	//$("ul.toget").off().click(function() {
 
 
-	$('ul.toget').delegate('li','click',function() {
+	$('ul.toget').undelegate('li', 'click').delegate('li','click',function() {
+	//$(document).off('click', 'ul.toget').on('click', 'ul.toget', function(e) {
 		console.log("CLICKED");
  		$(this).toggleClass('clicked');
  		if ($(this).children('i#uncheck').hasClass('fa-square-o')) {
@@ -36,12 +44,16 @@ $(document).ready(function(){
  			$(this).children('i#uncheck').addClass('fa-square-o');
  			$(this).children('i#uncheck').removeClass('fa-check-square-o');
  		};
- 	});
+ 		//});
+	
+});
 
-})
+
 
 	$('ul.toget').delegate('li i#trash','click',function() {
  	$(this).parent("li").remove();
   	});		  	
+
 });
-//});
+
+});
